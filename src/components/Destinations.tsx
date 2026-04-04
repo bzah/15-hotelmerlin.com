@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import jakartaImg from "@/assets/jakarta.jpg";
 import batamImg from "@/assets/batam.jpg";
 import maumereImg from "@/assets/maumere.jpg";
