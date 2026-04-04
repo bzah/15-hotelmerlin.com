@@ -19,10 +19,10 @@ const Footer = () => {
               Destinations
             </h4>
             <ul className="space-y-2 text-sm text-secondary-foreground/60">
-              <li><a href="#destinations" className="hover:text-gold transition-colors">Hotel Merlin Jakarta</a></li>
-              <li><a href="#destinations" className="hover:text-gold transition-colors">Hotel Merlin Batam</a></li>
-              <li><a href="#destinations" className="hover:text-gold transition-colors">Merlin Hotel Maumere</a></li>
-              <li><a href="#destinations" className="hover:text-gold transition-colors">Merlynn Park Hotel Jakarta</a></li>
+              <li><Link to="/hotel-merlin-jakarta" className="hover:text-gold transition-colors">Hotel Merlin Jakarta</Link></li>
+              <li><Link to="/hotel-merlin-batam" className="hover:text-gold transition-colors">Hotel Merlin Batam</Link></li>
+              <li><Link to="/merlin-hotel-maumere" className="hover:text-gold transition-colors">Merlin Hotel Maumere</Link></li>
+              <li><Link to="/hotel-merlin-jakarta" className="hover:text-gold transition-colors">Merlynn Park Hotel Jakarta</Link></li>
             </ul>
           </div>
 
