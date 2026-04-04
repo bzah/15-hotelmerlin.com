@@ -12,6 +12,13 @@ import DestinationBali from "./pages/DestinationBali.tsx";
 import DestinationYogyakarta from "./pages/DestinationYogyakarta.tsx";
 import DestinationLombok from "./pages/DestinationLombok.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Contact from "./pages/Contact.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsOfService from "./pages/TermsOfService.tsx";
+import CookiePolicy from "./pages/CookiePolicy.tsx";
+import DMCA from "./pages/DMCA.tsx";
+import LegalNotice from "./pages/LegalNotice.tsx";
+import ParentsInfo from "./pages/ParentsInfo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
