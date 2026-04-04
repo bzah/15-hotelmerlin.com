@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Landmark, Drama, ArrowRight, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import yogyakartaImg from "@/assets/yogyakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationYogyakarta = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Hotels in Yogyakarta"
+        description="Discover the best hotels in Yogyakarta for 2026. Visit Borobudur and Prambanan temples, explore batik workshops, Javanese cuisine, and the Sultan's Palace."
+        image="/assets/yogyakarta.jpg"
+        url="/hotels-yogyakarta"
+        geo={{ latitude: -7.7956, longitude: 110.3695 }}
+        priceRange="$-$$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Hotels in Yogyakarta", url: "/hotels-yogyakarta" },
+        ]}
+      />
       <Navbar />
 
       <div className="relative h-[55vh] min-h-[400px]">

@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Utensils, ShoppingBag, Landmark, ArrowRight } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import jakartaImg from "@/assets/jakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationJakarta = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Hotel Merlin Jakarta"
+        description="Find the best Hotel Merlin Jakarta options for 2026. Complete guide to luxury hotels, top attractions, dining, shopping, and nightlife in Indonesia's capital city."
+        image="/assets/jakarta.jpg"
+        url="/hotel-merlin-jakarta"
+        geo={{ latitude: -6.2088, longitude: 106.8456 }}
+        priceRange="$$-$$$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Hotel Merlin Jakarta", url: "/hotel-merlin-jakarta" },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}
