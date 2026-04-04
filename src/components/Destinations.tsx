@@ -2,17 +2,33 @@ import { Link } from "react-router-dom";
 import jakartaImg from "@/assets/jakarta.jpg";
 import batamImg from "@/assets/batam.jpg";
 import maumereImg from "@/assets/maumere.jpg";
+import baliImg from "@/assets/bali.jpg";
+import yogyakartaImg from "@/assets/yogyakarta.jpg";
+import lombokImg from "@/assets/lombok.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const destinations = [
+  {
+    name: "Bali",
+    slug: "best-hotels-bali",
+    image: baliImg,
+    description:
+      "The Island of the Gods — luxury resorts, ancient temples, rice terraces, and world-famous beaches. Indonesia's #1 destination.",
+  },
   {
     name: "Jakarta",
     slug: "hotel-merlin-jakarta",
     image: jakartaImg,
     description:
       "Indonesia's vibrant capital — explore iconic landmarks, world-class shopping, and rich cultural heritage. Find the best Merlin hotels in Jakarta.",
-    gygLink: `https://www.getyourguide.com/jakarta-l294/?partner_id=${GYG_PARTNER}&utm_medium=online_publisher`,
+  },
+  {
+    name: "Yogyakarta",
+    slug: "hotels-yogyakarta",
+    image: yogyakartaImg,
+    description:
+      "Indonesia's cultural capital — home to Borobudur, Prambanan temples, batik workshops, and rich Javanese heritage.",
   },
   {
     name: "Batam",
@@ -20,15 +36,20 @@ const destinations = [
     image: batamImg,
     description:
       "A tropical island paradise just a ferry ride from Singapore. Enjoy stunning beaches, resorts, and water sports at Hotel Merlin Batam.",
-    gygLink: `https://www.getyourguide.com/batam-l4042/?partner_id=${GYG_PARTNER}&utm_medium=online_publisher`,
+  },
+  {
+    name: "Lombok",
+    slug: "hotels-lombok",
+    image: lombokImg,
+    description:
+      "Bali's unspoiled neighbor — Mount Rinjani, the Gili Islands, pristine beaches, and epic surf breaks await.",
   },
   {
     name: "Maumere",
     slug: "merlin-hotel-maumere",
     image: maumereImg,
     description:
-      "A hidden gem on Flores Island — discover pristine diving spots, traditional villages, and breathtaking volcanic landscapes near Merlin Hotel Maumere.",
-    gygLink: `https://www.getyourguide.com/flores-l32295/?partner_id=${GYG_PARTNER}&utm_medium=online_publisher`,
+      "A hidden gem on Flores Island — discover pristine diving spots, traditional villages, and breathtaking volcanic landscapes.",
   },
 ];
 
@@ -44,7 +65,7 @@ const Destinations = () => {
             Top Destinations
           </h2>
           <p className="text-muted-foreground max-w-xl mx-auto">
-            From bustling cities to hidden island paradises, discover the best Merlin hotel locations across Indonesia.
+            From bustling cities to hidden island paradises, discover the best hotels and experiences across Indonesia.
           </p>
         </div>
 
