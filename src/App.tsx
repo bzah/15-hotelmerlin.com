@@ -5,6 +5,9 @@ import { Toaster } from "@/components/ui/toaster";
 import { TooltipProvider } from "@/components/ui/tooltip";
 import Index from "./pages/Index.tsx";
 import BlogPost from "./pages/BlogPost.tsx";
+import DestinationJakarta from "./pages/DestinationJakarta.tsx";
+import DestinationBatam from "./pages/DestinationBatam.tsx";
+import DestinationMaumere from "./pages/DestinationMaumere.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -18,6 +21,9 @@ const App = () => (
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/blog/:slug" element={<BlogPost />} />
+          <Route path="/hotel-merlin-jakarta" element={<DestinationJakarta />} />
+          <Route path="/hotel-merlin-batam" element={<DestinationBatam />} />
+          <Route path="/merlin-hotel-maumere" element={<DestinationMaumere />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>

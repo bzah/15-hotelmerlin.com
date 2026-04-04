@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom";
 import jakartaImg from "@/assets/jakarta.jpg";
 import batamImg from "@/assets/batam.jpg";
 import maumereImg from "@/assets/maumere.jpg";
@@ -49,9 +50,10 @@ const Destinations = () => {
 
         <div className="grid md:grid-cols-3 gap-8">
           {destinations.map((dest) => (
-            <article
+            <Link
               key={dest.slug}
-              className="card-hover group rounded-2xl overflow-hidden bg-card border border-border"
+              to={`/${dest.slug}`}
+              className="card-hover group rounded-2xl overflow-hidden bg-card border border-border block"
             >
               <div className="relative h-64 overflow-hidden">
                 <img
@@ -71,16 +73,11 @@ const Destinations = () => {
                 <p className="text-muted-foreground text-sm leading-relaxed mb-4">
                   {dest.description}
                 </p>
-                <a
-                  href={dest.gygLink}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="inline-flex items-center text-primary font-semibold text-sm hover:text-gold-dark transition-colors"
-                >
-                  Explore Tours →
-                </a>
+                <span className="inline-flex items-center text-primary font-semibold text-sm group-hover:text-gold-dark transition-colors">
+                  Explore {dest.name} →
+                </span>
               </div>
-            </article>
+            </Link>
           ))}
         </div>
       </div>
