@@ -26,6 +26,12 @@ const DestinationLombok = () => {
         url="/hotels-lombok"
         geo={{ latitude: -8.6501, longitude: 116.3249 }}
         priceRange="$-$$$"
+        faqs={[
+          { question: "Is Lombok better than Bali?", answer: "Lombok offers a more untouched, less crowded experience than Bali with stunning beaches, Mount Rinjani, and the Gili Islands. It's ideal for travelers seeking adventure and tranquility at lower prices." },
+          { question: "How do I get from Bali to Lombok?", answer: "Fast boats from Bali to Lombok/Gili Islands take 1.5-2.5 hours. Flights from Bali to Lombok International Airport (LOP) take just 25 minutes. Public ferries from Padang Bai take 4-5 hours for about $3." },
+          { question: "Which Gili Island should I visit?", answer: "Gili Trawangan for nightlife and diving, Gili Air for a balanced mix of social and relaxed vibes with great snorkeling, and Gili Meno for honeymoons and ultimate tranquility." },
+          { question: "How long does it take to climb Mount Rinjani?", answer: "The standard crater rim trek takes 2 days/1 night. The summit trek (3,726m) takes 3 days/2 nights. A guide and permit are mandatory. The best trekking season is April to November." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },

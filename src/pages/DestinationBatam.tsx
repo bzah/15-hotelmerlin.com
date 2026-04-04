@@ -26,6 +26,12 @@ const DestinationBatam = () => {
         url="/hotel-merlin-batam"
         geo={{ latitude: 1.0456, longitude: 104.0305 }}
         priceRange="$-$$$"
+        faqs={[
+          { question: "How do I get from Singapore to Batam?", answer: "Take a ferry from HarbourFront Centre or Tanah Merah Ferry Terminal in Singapore. The journey takes 45-60 minutes with frequent daily departures from operators like Batam Fast and Majestic Fast Ferry." },
+          { question: "Do I need a visa to visit Batam from Singapore?", answer: "Most nationalities including Singapore, EU, US, and UK citizens get visa-free entry to Indonesia for up to 30 days. Bring your passport with at least 6 months validity." },
+          { question: "What is Hotel Merlin Batam known for?", answer: "Hotel Merlin Batam offers comfortable accommodation with easy access to Nagoya Hill shopping, seafood restaurants, beach resorts, and golf courses. It's a popular base for Singapore weekend travelers." },
+          { question: "Is Batam worth visiting for a weekend?", answer: "Absolutely! Batam offers affordable spa treatments, excellent seafood, duty-free shopping, beach resorts, and golf courses — all just a short ferry ride from Singapore at a fraction of the cost." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },
