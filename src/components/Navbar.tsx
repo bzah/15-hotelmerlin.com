@@ -7,6 +7,7 @@ const navLinks = [
   { label: "Hotels", href: "#hotels" },
   { label: "Tours", href: "#tours" },
   { label: "Activities", href: "#activities" },
+  { label: "Blog", href: "#blog" },
 ];
 
 const Navbar = () => {

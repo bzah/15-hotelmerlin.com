@@ -4,6 +4,7 @@ import Destinations from "@/components/Destinations";
 import WhyVisit from "@/components/WhyVisit";
 import Tours from "@/components/Tours";
 import GYGWidget from "@/components/GYGWidget";
+import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 
 const Index = () => {
@@ -15,6 +16,7 @@ const Index = () => {
       <WhyVisit />
       <Tours />
       <GYGWidget />
+      <BlogSection />
       <Footer />
     </div>
   );
