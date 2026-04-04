@@ -8,6 +8,9 @@ import BlogPost from "./pages/BlogPost.tsx";
 import DestinationJakarta from "./pages/DestinationJakarta.tsx";
 import DestinationBatam from "./pages/DestinationBatam.tsx";
 import DestinationMaumere from "./pages/DestinationMaumere.tsx";
+import DestinationBali from "./pages/DestinationBali.tsx";
+import DestinationYogyakarta from "./pages/DestinationYogyakarta.tsx";
+import DestinationLombok from "./pages/DestinationLombok.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,9 @@ const App = () => (
           <Route path="/hotel-merlin-jakarta" element={<DestinationJakarta />} />
           <Route path="/hotel-merlin-batam" element={<DestinationBatam />} />
           <Route path="/merlin-hotel-maumere" element={<DestinationMaumere />} />
+          <Route path="/best-hotels-bali" element={<DestinationBali />} />
+          <Route path="/hotels-yogyakarta" element={<DestinationYogyakarta />} />
+          <Route path="/hotels-lombok" element={<DestinationLombok />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
