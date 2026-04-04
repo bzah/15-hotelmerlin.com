@@ -120,7 +120,7 @@ const DestinationBatam = () => {
             { name: "Mangrove Eco-Tours", desc: "Explore Batam's mangrove forests by kayak or boat. Spot wildlife and enjoy the serene natural landscape." },
           ].map((item) => (
             <div key={item.name} className="flex gap-3 mb-4 ml-1">
-              <Palmtree className="w-5 h-5 text-primary mt-1 shrink-0" />
+              <TreePalm className="w-5 h-5 text-primary mt-1 shrink-0" />
               <div>
                 <p className="font-heading font-semibold text-foreground">{item.name}</p>
                 <p className="text-muted-foreground text-sm">{item.desc}</p>
