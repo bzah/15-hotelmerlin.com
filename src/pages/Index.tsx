@@ -16,6 +16,7 @@ const Index = () => {
       <WhyVisit />
       <Tours />
       <GYGWidget />
+      <BlogSection />
       <Footer />
     </div>
   );
