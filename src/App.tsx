@@ -12,6 +12,13 @@ import DestinationBali from "./pages/DestinationBali.tsx";
 import DestinationYogyakarta from "./pages/DestinationYogyakarta.tsx";
 import DestinationLombok from "./pages/DestinationLombok.tsx";
 import AboutUs from "./pages/AboutUs.tsx";
+import Contact from "./pages/Contact.tsx";
+import PrivacyPolicy from "./pages/PrivacyPolicy.tsx";
+import TermsOfService from "./pages/TermsOfService.tsx";
+import CookiePolicy from "./pages/CookiePolicy.tsx";
+import DMCA from "./pages/DMCA.tsx";
+import LegalNotice from "./pages/LegalNotice.tsx";
+import ParentsInfo from "./pages/ParentsInfo.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
@@ -32,6 +39,13 @@ const App = () => (
           <Route path="/hotels-yogyakarta" element={<DestinationYogyakarta />} />
           <Route path="/hotels-lombok" element={<DestinationLombok />} />
           <Route path="/about" element={<AboutUs />} />
+          <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
+          <Route path="/cookie-policy" element={<CookiePolicy />} />
+          <Route path="/dmca" element={<DMCA />} />
+          <Route path="/legal-notice" element={<LegalNotice />} />
+          <Route path="/parents-info" element={<ParentsInfo />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
