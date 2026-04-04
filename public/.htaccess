@@ -1,0 +1,32 @@
+# =============================================
+# HotelMerlin.com — Apache .htaccess (Hostinger)
+# =============================================
+
+RewriteEngine On
+
+# --- Force HTTPS ---
+RewriteCond %{HTTPS} off
+RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# --- Remove www ---
+RewriteCond %{HTTP_HOST} ^www\.hotelmerlin\.com$ [NC]
+RewriteRule ^ https://hotelmerlin.com%{REQUEST_URI} [L,R=301]
+
+# --- Remove trailing slash (except root) ---
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_URI} (.+)/$
+RewriteRule ^ %1 [L,R=301]
+
+# --- 410 Gone for old WordPress URLs ---
+RewriteRule ^wp-admin(/.*)?$ - [G,L]
+RewriteRule ^wp-login\.php$ - [G,L]
+RewriteRule ^wp-content(/.*)?$ - [G,L]
+RewriteRule ^wp-includes(/.*)?$ - [G,L]
+RewriteRule ^xmlrpc\.php$ - [G,L]
+RewriteRule ^wp-cron\.php$ - [G,L]
+RewriteRule ^wp-json(/.*)?$ - [G,L]
+
+# --- SPA Fallback ---
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule ^ /index.html [L]
