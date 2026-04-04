@@ -36,7 +36,7 @@ const Footer = () => {
               <li><a href="#tours" className="hover:text-gold transition-colors">Tours & Activities</a></li>
               <li><a href="#activities" className="hover:text-gold transition-colors">Book Adventures</a></li>
               <li><a href="#destinations" className="hover:text-gold transition-colors">All Destinations</a></li>
-              <li><a href="#" className="hover:text-gold transition-colors">About Hotel Merlin</a></li>
+              <li><Link to="/about" className="hover:text-gold transition-colors">About Hotel Merlin</Link></li>
             </ul>
           </div>
 

@@ -31,6 +31,7 @@ const App = () => (
           <Route path="/best-hotels-bali" element={<DestinationBali />} />
           <Route path="/hotels-yogyakarta" element={<DestinationYogyakarta />} />
           <Route path="/hotels-lombok" element={<DestinationLombok />} />
+          <Route path="/about" element={<AboutUs />} />
           {/* ADD ALL CUSTOM ROUTES ABOVE THE CATCH-ALL "*" ROUTE */}
           <Route path="*" element={<NotFound />} />
         </Routes>
