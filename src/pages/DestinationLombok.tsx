@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Mountain, Waves, ArrowRight, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import lombokImg from "@/assets/lombok.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationLombok = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Hotels in Lombok"
+        description="Find the best hotels in Lombok for 2026. Complete guide to pristine beaches, Mount Rinjani trekking, Gili Islands, surfing, and luxury resorts."
+        image="/assets/lombok.jpg"
+        url="/hotels-lombok"
+        geo={{ latitude: -8.6501, longitude: 116.3249 }}
+        priceRange="$-$$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Hotels in Lombok", url: "/hotels-lombok" },
+        ]}
+      />
       <Navbar />
 
       <div className="relative h-[55vh] min-h-[400px]">

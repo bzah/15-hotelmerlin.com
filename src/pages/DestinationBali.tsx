@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Waves, Flower2, ArrowRight, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import baliImg from "@/assets/bali.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationBali = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Best Hotels in Bali"
+        description="Find the best hotels in Bali for 2026. Complete guide to luxury resorts, private villas, beach clubs, temples, rice terraces, and nightlife in Indonesia's island paradise."
+        image="/assets/bali.jpg"
+        url="/best-hotels-bali"
+        geo={{ latitude: -8.3405, longitude: 115.092 }}
+        priceRange="$-$$$$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Best Hotels in Bali", url: "/best-hotels-bali" },
+        ]}
+      />
       <Navbar />
 
       <div className="relative h-[55vh] min-h-[400px]">

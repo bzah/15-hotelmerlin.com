@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Fish, Mountain, ArrowRight, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import maumereImg from "@/assets/maumere.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationMaumere = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Merlin Hotel Maumere"
+        description="Discover Merlin Hotel Maumere on Flores Island. Complete guide to diving, Kelimutu volcano, traditional villages, and the best places to stay in eastern Indonesia."
+        image="/assets/maumere.jpg"
+        url="/merlin-hotel-maumere"
+        geo={{ latitude: -8.6195, longitude: 122.2121 }}
+        priceRange="$-$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Merlin Hotel Maumere", url: "/merlin-hotel-maumere" },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}

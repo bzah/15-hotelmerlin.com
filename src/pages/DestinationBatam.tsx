@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { MapPin, Star, Waves, Ship, ArrowRight, TreePalm } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import JsonLd from "@/components/JsonLd";
 import batamImg from "@/assets/batam.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -17,6 +18,20 @@ const DestinationBatam = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <JsonLd
+        type="destination"
+        name="Hotel Merlin Batam"
+        description="Discover Hotel Merlin Batam — your guide to the best hotels, beaches, seafood, shopping, and ferry connections from Singapore."
+        image="/assets/batam.jpg"
+        url="/hotel-merlin-batam"
+        geo={{ latitude: 1.0456, longitude: 104.0305 }}
+        priceRange="$-$$$"
+        breadcrumbs={[
+          { name: "Home", url: "/" },
+          { name: "Destinations", url: "/#destinations" },
+          { name: "Hotel Merlin Batam", url: "/hotel-merlin-batam" },
+        ]}
+      />
       <Navbar />
 
       {/* Hero */}
