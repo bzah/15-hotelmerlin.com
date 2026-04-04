@@ -5,24 +5,32 @@ interface BreadcrumbItem {
   url: string;
 }
 
+interface FaqItem {
+  question: string;
+  answer: string;
+}
+
 interface JsonLdProps {
-  type: "destination";
+  type: "destination" | "organization";
   name: string;
   description: string;
   image: string;
   url: string;
-  breadcrumbs: BreadcrumbItem[];
+  breadcrumbs?: BreadcrumbItem[];
   geo?: { latitude: number; longitude: number };
   priceRange?: string;
+  faqs?: FaqItem[];
 }
 
-const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRange }: JsonLdProps) => {
+const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRange, faqs }: JsonLdProps) => {
   useEffect(() => {
     const baseUrl = "https://hotelmerlin.com";
 
-    const schemas = [
-      // BreadcrumbList
-      {
+    const schemas: object[] = [];
+
+    // BreadcrumbList
+    if (breadcrumbs && breadcrumbs.length > 0) {
+      schemas.push({
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: breadcrumbs.map((item, i) => ({
@@ -31,9 +39,43 @@ const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRa
           name: item.name,
           item: `${baseUrl}${item.url}`,
         })),
-      },
-      // Hotel (LodgingBusiness)
-      {
+      });
+    }
+
+    if (type === "organization") {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "Organization",
+        name,
+        description,
+        url: baseUrl,
+        logo: `${baseUrl}/favicon.png`,
+        image: `${baseUrl}${image}`,
+        sameAs: [],
+        contactPoint: {
+          "@type": "ContactPoint",
+          contactType: "customer service",
+          availableLanguage: ["English", "Indonesian"],
+        },
+      });
+      // WebSite with SearchAction
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        name,
+        url: baseUrl,
+        description,
+        potentialAction: {
+          "@type": "SearchAction",
+          target: `${baseUrl}/?q={search_term_string}`,
+          "query-input": "required name=search_term_string",
+        },
+      });
+    }
+
+    if (type === "destination") {
+      // LodgingBusiness
+      schemas.push({
         "@context": "https://schema.org",
         "@type": "LodgingBusiness",
         name,
@@ -52,9 +94,9 @@ const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRa
             longitude: geo.longitude,
           },
         }),
-      },
+      });
       // TravelAction
-      {
+      schemas.push({
         "@context": "https://schema.org",
         "@type": "TravelAction",
         name: `Travel to ${name.replace(/^(Hotel Merlin |Merlin Hotel |Best Hotels in |Hotels in )/, "")}`,
@@ -67,11 +109,26 @@ const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRa
           "@type": "LodgingReservation",
           name: `Book accommodation at ${name}`,
         },
-      },
-    ];
+      });
+    }
+
+    // FAQPage
+    if (faqs && faqs.length > 0) {
+      schemas.push({
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: faqs.map((faq) => ({
+          "@type": "Question",
+          name: faq.question,
+          acceptedAnswer: {
+            "@type": "Answer",
+            text: faq.answer,
+          },
+        })),
+      });
+    }
 
     const scriptId = `jsonld-${url.replace(/\//g, "-")}`;
-    // Remove existing
     document.getElementById(scriptId)?.remove();
 
     const script = document.createElement("script");
@@ -83,7 +140,7 @@ const JsonLd = ({ type, name, description, image, url, breadcrumbs, geo, priceRa
     return () => {
       document.getElementById(scriptId)?.remove();
     };
-  }, [name, description, image, url, breadcrumbs, geo, priceRange]);
+  }, [type, name, description, image, url, breadcrumbs, geo, priceRange, faqs]);
 
   return null;
 };

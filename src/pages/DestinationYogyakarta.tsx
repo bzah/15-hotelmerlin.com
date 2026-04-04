@@ -26,6 +26,12 @@ const DestinationYogyakarta = () => {
         url="/hotels-yogyakarta"
         geo={{ latitude: -7.7956, longitude: 110.3695 }}
         priceRange="$-$$$"
+        faqs={[
+          { question: "How far is Borobudur from Yogyakarta?", answer: "Borobudur temple is about 40 km northwest of Yogyakarta city, approximately a 1-hour drive. Sunrise tours depart around 4 AM and are highly recommended." },
+          { question: "What is the best area to stay in Yogyakarta?", answer: "Malioboro Street is the most popular area for tourists with easy access to shopping, street food, and the Sultan's Palace. Prawirotaman is great for boutique hotels and a more local vibe." },
+          { question: "How many days do you need in Yogyakarta?", answer: "3-4 days is ideal: one day for Borobudur, one for Prambanan, one for the city (Kraton, Malioboro, batik workshops), and an optional day for Jomblang Cave or Mount Merapi." },
+          { question: "Is Yogyakarta cheaper than Bali?", answer: "Yes, significantly. Budget accommodation starts at $8-15/night, meals cost $1-5, and entrance fees to temples are $15-25 for foreigners. It's one of Indonesia's most affordable destinations." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },

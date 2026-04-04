@@ -26,6 +26,12 @@ const DestinationBali = () => {
         url="/best-hotels-bali"
         geo={{ latitude: -8.3405, longitude: 115.092 }}
         priceRange="$-$$$$$"
+        faqs={[
+          { question: "What are the best areas to stay in Bali?", answer: "The best areas include Seminyak for beach clubs and nightlife, Ubud for culture and rice terraces, Canggu for surfing and digital nomads, Nusa Dua for luxury resorts, and Uluwatu for cliff-top views and world-class surf." },
+          { question: "How much does a hotel in Bali cost per night?", answer: "Budget guesthouses start at $15-30/night, mid-range hotels run $50-150/night, and luxury resorts range from $200-1000+/night depending on the area and season." },
+          { question: "When is the best time to visit Bali?", answer: "The dry season from April to October is ideal. July-August is peak season with higher prices. May-June and September offer great weather with fewer crowds." },
+          { question: "Is Bali good for families?", answer: "Yes, Bali is excellent for families with kid-friendly beaches in Sanur and Nusa Dua, water parks, cultural activities, and many family resorts with children's programs." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },

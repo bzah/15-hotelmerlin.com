@@ -26,6 +26,12 @@ const DestinationMaumere = () => {
         url="/merlin-hotel-maumere"
         geo={{ latitude: -8.6195, longitude: 122.2121 }}
         priceRange="$-$$"
+        faqs={[
+          { question: "How do I get to Maumere in Flores?", answer: "Fly to Frans Seda Airport (MOF) in Maumere with connections from Bali, Jakarta, or Kupang via Lion Air and Wings Air. Alternatively, take the scenic overland route from Labuan Bajo (8-10 hours)." },
+          { question: "What is Merlin Hotel Maumere?", answer: "Merlin Hotel Maumere is a comfortable hotel on Flores Island, ideally located for exploring Kelimutu volcano, world-class diving spots, traditional villages, and the stunning eastern Indonesian coastline." },
+          { question: "What is there to do in Maumere?", answer: "Top activities include diving and snorkeling in the Maumere Bay marine reserve, visiting Kelimutu's tri-colored crater lakes, exploring traditional Sikka weaving villages, and beach hopping along the north coast." },
+          { question: "Is Maumere safe for tourists?", answer: "Yes, Maumere and Flores Island are very safe for tourists. The local Sikkanese people are known for their warm hospitality. Standard travel precautions apply as with any destination." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },

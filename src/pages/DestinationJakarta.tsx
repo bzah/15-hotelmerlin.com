@@ -26,6 +26,12 @@ const DestinationJakarta = () => {
         url="/hotel-merlin-jakarta"
         geo={{ latitude: -6.2088, longitude: 106.8456 }}
         priceRange="$$-$$$$"
+        faqs={[
+          { question: "Where is Hotel Merlin Jakarta located?", answer: "Hotel Merlin Jakarta is centrally located in the heart of Indonesia's capital, with easy access to major business districts, shopping malls, and cultural landmarks." },
+          { question: "What are the best hotels in Jakarta for business travelers?", answer: "Top business hotels include properties in the Thamrin-Sudirman corridor, Kuningan, and SCBD areas, offering meeting facilities, executive lounges, and proximity to corporate offices." },
+          { question: "How do I get from Jakarta airport to the city center?", answer: "The Soekarno-Hatta Airport Rail Link (ARL) takes 45 minutes to Sudirman station. Taxis cost $15-25 and take 45-90 minutes depending on traffic. Ride-hailing apps like Grab are also popular." },
+          { question: "What is the best time to visit Jakarta?", answer: "June to September is the dry season with the most pleasant weather. Avoid December-February when heavy rains can cause flooding in some areas." },
+        ]}
         breadcrumbs={[
           { name: "Home", url: "/" },
           { name: "Destinations", url: "/#destinations" },
