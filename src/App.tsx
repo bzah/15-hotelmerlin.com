@@ -11,6 +11,7 @@ import DestinationMaumere from "./pages/DestinationMaumere.tsx";
 import DestinationBali from "./pages/DestinationBali.tsx";
 import DestinationYogyakarta from "./pages/DestinationYogyakarta.tsx";
 import DestinationLombok from "./pages/DestinationLombok.tsx";
+import AboutUs from "./pages/AboutUs.tsx";
 import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
