@@ -258,4 +258,272 @@ Indonesia has two seasons:
 [Browse Indonesia tours and activities →](/tours)
     `,
   },
+  {
+    slug: "jakarta-vs-bali-which-to-visit-first",
+    title: "Jakarta vs Bali: Which Should You Visit First in 2026?",
+    excerpt: "Comparing Indonesia's buzzing capital with its island paradise — nightlife, culture, costs, and which suits your travel style best.",
+    metaDescription: "Jakarta vs Bali — which Indonesian destination should you visit first? Compare costs, culture, nightlife, beaches & more in our 2026 travel comparison guide.",
+    date: "2026-04-01",
+    readTime: "8 min read",
+    category: "Destinations",
+    image: "/src/assets/jakarta.jpg",
+    content: `
+## Jakarta vs Bali: The Ultimate Comparison
+
+Two of Indonesia's most iconic destinations couldn't be more different. Jakarta is a sprawling megacity of 11 million people, while Bali is a tropical island known for temples, rice terraces, and surf breaks. Here's how they compare.
+
+### Culture & Atmosphere
+
+**Jakarta** is Indonesia's melting pot — a fast-paced, cosmopolitan capital where Javanese, Sundanese, Chinese, and dozens of other cultures converge. Expect world-class museums, historic Kota Tua, and vibrant street food scenes.
+
+**Bali** offers a deeply spiritual atmosphere with Hindu temples, daily offerings, and traditional dance performances. The pace is slower, the air is cleaner, and the vibe is unmistakably relaxed.
+
+### Cost Comparison (Per Day, Mid-Range)
+
+| Category | Jakarta | Bali |
+|----------|---------|------|
+| Hotel | $60–$120 | $40–$100 |
+| Meals | $15–$30 | $10–$25 |
+| Transport | $10–$20 | $8–$15 |
+| Activities | $10–$30 | $15–$40 |
+
+### Nightlife
+
+- **Jakarta:** Rooftop bars in SCBD, live music in Kemang, craft cocktail lounges in Menteng
+- **Bali:** Beach clubs in Seminyak, sunset sessions at Uluwatu, late nights in Kuta
+
+### Beaches
+
+Jakarta doesn't have beaches worth visiting (the Thousand Islands are a day trip). Bali wins hands down with Kuta, Seminyak, Nusa Dua, Uluwatu, and countless hidden coves.
+
+### Food Scene
+
+Both are exceptional, but different:
+- **Jakarta:** Padang restaurants, Betawi cuisine, fine dining in Sudirman
+- **Bali:** Babi guling (suckling pig), nasi campur, trendy brunch cafés in Canggu
+
+### Who Should Visit Jakarta First?
+
+- Business travelers
+- Culture and history enthusiasts
+- Urban explorers who love megacities
+- Foodies seeking authentic Indonesian street food
+
+### Who Should Visit Bali First?
+
+- Beach lovers and surfers
+- Yoga and wellness seekers
+- Couples on a romantic getaway
+- First-time visitors to Southeast Asia
+
+### The Verdict
+
+**Visit Bali first** if you want the quintessential tropical paradise experience. **Visit Jakarta first** if you want to understand the real Indonesia — its energy, diversity, and complexity. Better yet, combine both in a single trip!
+
+[Browse Jakarta & Bali tours →](/tours)
+    `,
+  },
+  {
+    slug: "batam-weekend-guide-from-singapore",
+    title: "Batam Weekend Guide from Singapore — 2026 Edition",
+    excerpt: "Plan the perfect 2-day Batam getaway from Singapore. Ferry schedules, top hotels, best seafood spots, and activities for every budget.",
+    metaDescription: "Plan your Batam weekend trip from Singapore. Ferry times, best hotels, seafood restaurants, spas & shopping. Your complete 2026 Batam weekend guide.",
+    date: "2026-03-25",
+    readTime: "11 min read",
+    category: "Travel Tips",
+    image: "/src/assets/batam.jpg",
+    content: `
+## The Perfect Batam Weekend from Singapore
+
+Batam is Singapore's favorite weekend escape — and for good reason. In under an hour, you swap the Lion City's skyscrapers for island breezes, cheap massages, and plates piled high with chilli crab. Here's how to make the most of 48 hours.
+
+### Getting There: Ferry Options
+
+| Operator | From | Duration | Price (Return) |
+|----------|------|----------|----------------|
+| Batam Fast | HarbourFront | 50 min | S$38–$55 |
+| Majestic Fast Ferry | HarbourFront | 55 min | S$36–$50 |
+| Sindo Ferry | Tanah Merah | 45 min | S$32–$48 |
+
+**Pro tips:**
+- Book online 3+ days ahead for weekend trips
+- First ferry departs ~7:40 AM, last return ~8:30 PM
+- Bring your passport — Batam requires immigration clearance
+- Visa on arrival is free for Singapore residents (30 days)
+
+### Day 1: Arrive, Eat, Relax
+
+**Morning:** Take the 8 AM ferry. Clear immigration at Batam Centre or Harbour Bay.
+
+**Lunch:** Head straight to **Golden Prawn 933** for legendary black pepper crab and butter prawns. Budget ~S$25 per person for a feast.
+
+**Afternoon:** Book a 2-hour spa package. Top picks:
+- **Montigo Spa** — Luxury, from S$60
+- **Batam Spa & Massage** — Budget-friendly, from S$15
+- **Palm Springs Golf & Beach Resort** — Spa + pool combo
+
+**Evening:** Dinner at **Harbour Bay Seafood** followed by drinks at a local karaoke bar.
+
+### Day 2: Beach, Shop, Depart
+
+**Morning:** Visit **Nongsa Beach** for jet skiing (S$25/30 min) or simply relax on the sand.
+
+**Late Morning:** Shopping at **Nagoya Hill Mall** — electronics, clothes, and souvenirs at duty-free prices.
+
+**Lunch:** Try **Mie Tarempa**, Batam's signature spicy noodle soup, at a local warung near Nagoya.
+
+**Afternoon:** Catch the 3 or 5 PM ferry back to Singapore.
+
+### Best Hotels for a Weekend Stay
+
+1. **Hotel Merlin Batam** — Central location, pool, excellent value (~S$50/night)
+2. **Montigo Resorts Nongsa** — Luxury villas with private pools (~S$180/night)
+3. **Harmoni One Hotel** — Modern, clean, walking distance to Nagoya (~S$40/night)
+4. **I Hotel Baloi** — Boutique feel with rooftop bar (~S$55/night)
+
+### Budget Breakdown (2 Days / 1 Night)
+
+| Item | Budget | Mid-Range | Luxury |
+|------|--------|-----------|--------|
+| Ferry | S$36 | S$45 | S$55 |
+| Hotel | S$30 | S$55 | S$180 |
+| Meals | S$30 | S$60 | S$120 |
+| Spa | S$15 | S$40 | S$80 |
+| Activities | S$20 | S$50 | S$100 |
+| **Total** | **S$131** | **S$250** | **S$535** |
+
+### What to Bring
+
+- Passport (valid 6+ months)
+- Cash in SGD (widely accepted) or IDR
+- Sunscreen and swimwear
+- A small daypack for shopping finds
+
+[Book Batam activities →](/tours)
+    `,
+  },
+  {
+    slug: "best-diving-spots-indonesia-2026",
+    title: "Best Diving Spots in Indonesia — 2026 Diver's Guide",
+    excerpt: "From Raja Ampat's pristine reefs to Komodo's manta highways, discover Indonesia's top 10 dive destinations for every skill level.",
+    metaDescription: "Explore the best diving spots in Indonesia for 2026. Raja Ampat, Komodo, Bunaken, Maumere & more. Complete guide with costs, seasons & dive operator tips.",
+    date: "2026-03-18",
+    readTime: "12 min read",
+    category: "Activities",
+    image: "/src/assets/maumere.jpg",
+    content: `
+## Indonesia: The World's Greatest Diving Destination
+
+With over 17,000 islands straddling the Coral Triangle, Indonesia is home to 20% of the world's coral reefs and more marine species than anywhere else on Earth. Whether you're a beginner or a seasoned tech diver, these are the spots you need to explore in 2026.
+
+### 1. Raja Ampat, West Papua
+
+**The crown jewel.** Raja Ampat holds the world record for marine biodiversity — over 1,500 fish species and 600 coral species in a single survey area.
+
+- **Best for:** Experienced divers, underwater photographers
+- **Highlights:** Manta rays at Manta Sandy, wobbegong sharks, pygmy seahorses
+- **Season:** October–April
+- **Cost:** $150–$250/day liveaboard, $60–$100/dive from resort
+- **Marine park fee:** ~$100 (valid 1 year)
+
+### 2. Komodo National Park, Flores
+
+Famous for dragons on land and mantas underwater, Komodo offers thrilling drift dives and guaranteed big animal encounters.
+
+- **Best for:** Intermediate to advanced divers
+- **Highlights:** Manta alley, Batu Bolong wall, pink beach snorkeling
+- **Season:** April–November
+- **Cost:** $50–$80/dive from Labuan Bajo
+
+### 3. Bunaken, North Sulawesi
+
+One of Indonesia's original dive meccas, Bunaken's dramatic walls plunge 300+ meters into the Sulawesi Sea.
+
+- **Best for:** All levels
+- **Highlights:** Wall diving, turtles, barracuda schools, Lekuan I-III
+- **Season:** March–October
+- **Cost:** $30–$50/dive
+
+### 4. Maumere, Flores
+
+A regenerating reef system that offers unique macro diving and uncrowded sites. [Read our full Maumere guide →](/blog/maumere-hidden-paradise-flores)
+
+- **Best for:** Macro enthusiasts, off-the-beaten-path divers
+- **Highlights:** Seahorses, nudibranchs, reef sharks at Pomana Besar
+- **Season:** April–November
+- **Cost:** $40–$60/dive
+
+### 5. Derawan Islands, East Kalimantan
+
+A remote archipelago where stingless jellyfish fill a hidden lake and green turtles nest on pristine beaches.
+
+- **Best for:** Adventure seekers
+- **Highlights:** Jellyfish Lake (Kakaban), manta cleaning station, turtle nesting
+- **Season:** March–October
+- **Cost:** $45–$70/dive
+
+### 6. Wakatobi, Southeast Sulawesi
+
+A UNESCO Biosphere Reserve with some of the healthiest reefs in Indonesia and exceptional house reef diving.
+
+- **Best for:** All levels, luxury diving
+- **Highlights:** House Reef (rated world's best), pristine coral gardens
+- **Season:** March–December
+- **Cost:** $50–$90/dive (Wakatobi Resort), $30–$50 (local operators)
+
+### 7. Alor, East Nusa Tenggara
+
+Wild currents, hammerhead sharks, and barely explored dive sites make Alor Indonesia's frontier diving destination.
+
+- **Best for:** Advanced divers
+- **Highlights:** Hammerheads, thresher sharks, traditional muck diving
+- **Season:** March–November
+- **Cost:** $40–$60/dive
+
+### 8. Banda Islands, Maluku
+
+The original Spice Islands offer pristine walls, WWII wrecks, and hammerhead encounters — all with almost no other divers around.
+
+- **Best for:** History buffs, experienced divers
+- **Highlights:** Hatta Island walls, hammerhead season, volcanic landscapes
+- **Season:** September–May
+- **Cost:** $50–$80/dive
+
+### 9. Nusa Penida, Bali
+
+Just 45 minutes from Bali, Nusa Penida delivers mola mola (ocean sunfish) sightings and manta ray encounters accessible to newer divers.
+
+- **Best for:** Intermediate divers, day-trippers from Bali
+- **Highlights:** Mola mola (July–October), Manta Point, Crystal Bay
+- **Season:** July–October for mola, year-round for mantas
+- **Cost:** $35–$60/dive
+
+### 10. Lembeh Strait, North Sulawesi
+
+The "Critter Capital of the World" — if it's weird and tiny, Lembeh has it. Pair with Bunaken for the ultimate North Sulawesi dive trip.
+
+- **Best for:** Macro photographers, experienced divers
+- **Highlights:** Mimic octopus, hairy frogfish, flamboyant cuttlefish, blue-ring octopus
+- **Season:** Year-round
+- **Cost:** $30–$50/dive
+
+### Dive Certification in Indonesia
+
+Don't have a dive license yet? Indonesia is one of the cheapest places in the world to get certified:
+
+- **PADI Open Water:** $300–$450 (3–4 days)
+- **Advanced Open Water:** $250–$350 (2 days)
+- **Best places to learn:** Gili Islands, Nusa Lembongan, Bunaken
+
+### Essential Packing List for Diving in Indonesia
+
+- Reef-safe sunscreen
+- Rash guard / wetsuit (3mm for most areas)
+- Underwater camera
+- Dive insurance (DAN or equivalent)
+- Motion sickness medication for boat days
+
+[Browse diving tours in Indonesia →](/tours)
+    `,
+  },
 ];
