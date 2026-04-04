@@ -70,6 +70,18 @@ const BlogPost = () => {
           {post.content.split("\n").map((line, i) => {
             const trimmed = line.trim();
             if (!trimmed) return null;
+
+            // Helper to parse inline **bold** within text
+            const renderInline = (text: string) => {
+              const parts = text.split(/(\*\*.*?\*\*)/g);
+              return parts.map((part, j) => {
+                if (part.startsWith("**") && part.endsWith("**")) {
+                  return <strong key={j} className="text-foreground">{part.slice(2, -2)}</strong>;
+                }
+                return part;
+              });
+            };
+
             if (trimmed.startsWith("## "))
               return <h2 key={i} className="text-2xl md:text-3xl font-heading font-bold text-foreground mt-10 mb-4">{trimmed.slice(3)}</h2>;
             if (trimmed.startsWith("### "))
@@ -78,20 +90,20 @@ const BlogPost = () => {
               return <p key={i} className="font-bold text-foreground mt-4 mb-1">{trimmed.slice(2, -2)}</p>;
             if (trimmed.startsWith("- **")) {
               const match = trimmed.match(/^- \*\*(.+?)\*\*\s*[—–-]?\s*(.*)$/);
-              if (match) return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary">•</span><span><strong className="text-foreground">{match[1]}</strong> — {match[2]}</span></div>;
+              if (match) return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary">•</span><span><strong className="text-foreground">{match[1]}</strong> — {renderInline(match[2])}</span></div>;
             }
             if (trimmed.startsWith("- "))
-              return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary">•</span><span>{trimmed.slice(2)}</span></div>;
+              return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary">•</span><span>{renderInline(trimmed.slice(2))}</span></div>;
             if (/^\d+\.\s/.test(trimmed)) {
               const match = trimmed.match(/^(\d+)\.\s\*\*(.+?)\*\*\s*[—–-]?\s*(.*)$/);
-              if (match) return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary font-bold">{match[1]}.</span><span><strong className="text-foreground">{match[2]}</strong> — {match[3]}</span></div>;
-              return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary font-bold">{trimmed.match(/^\d+/)?.[0]}.</span><span>{trimmed.replace(/^\d+\.\s*/, "")}</span></div>;
+              if (match) return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary font-bold">{match[1]}.</span><span><strong className="text-foreground">{match[2]}</strong> — {renderInline(match[3])}</span></div>;
+              return <div key={i} className="flex gap-2 text-muted-foreground mb-1 ml-4"><span className="text-primary font-bold">{trimmed.match(/^\d+/)?.[0]}.</span><span>{renderInline(trimmed.replace(/^\d+\.\s*/, ""))}</span></div>;
             }
             if (trimmed.startsWith("[") && trimmed.includes("](")) {
               const linkMatch = trimmed.match(/\[(.+?)\]\((.+?)\)/);
               if (linkMatch) return <p key={i} className="mt-6"><Link to={linkMatch[2]} className="inline-flex items-center gap-2 text-primary hover:text-gold-dark font-medium transition-colors">{linkMatch[1]}</Link></p>;
             }
-            return <p key={i} className="text-muted-foreground leading-relaxed mb-3">{trimmed}</p>;
+            return <p key={i} className="text-muted-foreground leading-relaxed mb-3">{renderInline(trimmed)}</p>;
           })}
         </div>
 
