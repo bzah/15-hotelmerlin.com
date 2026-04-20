@@ -1,10 +1,40 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import { Mail, Phone, MapPin, Clock, Send } from "lucide-react";
+import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "@/hooks/use-toast";
 
 const Contact = () => {
+  const [form, setForm] = useState({ name: "", email: "", subject: "", message: "" });
+  const [loading, setLoading] = useState(false);
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setForm((prev) => ({ ...prev, [e.target.name]: e.target.value }));
+  };
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!form.name || !form.email || !form.message) {
+      toast({ title: "Missing fields", description: "Please fill in your name, email, and message.", variant: "destructive" });
+      return;
+    }
+    setLoading(true);
+    try {
+      const { data, error } = await supabase.functions.invoke("send-contact-email", { body: form });
+      if (error) throw error;
+      if ((data as any)?.error) throw new Error((data as any).error);
+      toast({ title: "Message sent!", description: "Thank you — we'll get back to you within 24 hours." });
+      setForm({ name: "", email: "", subject: "", message: "" });
+    } catch (err: any) {
+      console.error(err);
+      toast({ title: "Failed to send", description: err.message || "Please try again later.", variant: "destructive" });
+    } finally {
+      setLoading(false);
+    }
+  };
+
   useEffect(() => {
     document.title = "Contact Hotel Merlin — Get in Touch With Our Travel Team";
     const meta = document.querySelector('meta[name="description"]');
@@ -91,27 +121,27 @@ const Contact = () => {
           <h2 className="text-2xl font-heading font-bold text-foreground mb-6 flex items-center gap-2">
             <Send className="w-5 h-5 text-primary" /> Send Us a Message
           </h2>
-          <form onSubmit={(e) => e.preventDefault()} className="space-y-5">
+          <form onSubmit={handleSubmit} className="space-y-5">
             <div className="grid md:grid-cols-2 gap-5">
               <div>
-                <label className="block text-sm text-muted-foreground mb-1.5">Full Name</label>
-                <input type="text" className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Your name" />
+                <label htmlFor="name" className="block text-sm text-muted-foreground mb-1.5">Full Name</label>
+                <input id="name" name="name" type="text" required value={form.name} onChange={handleChange} className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="Your name" />
               </div>
               <div>
-                <label className="block text-sm text-muted-foreground mb-1.5">Email Address</label>
-                <input type="email" className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="you@example.com" />
+                <label htmlFor="email" className="block text-sm text-muted-foreground mb-1.5">Email Address</label>
+                <input id="email" name="email" type="email" required value={form.email} onChange={handleChange} className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="you@example.com" />
               </div>
             </div>
             <div>
-              <label className="block text-sm text-muted-foreground mb-1.5">Subject</label>
-              <input type="text" className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="How can we help?" />
+              <label htmlFor="subject" className="block text-sm text-muted-foreground mb-1.5">Subject</label>
+              <input id="subject" name="subject" type="text" value={form.subject} onChange={handleChange} className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition" placeholder="How can we help?" />
             </div>
             <div>
-              <label className="block text-sm text-muted-foreground mb-1.5">Message</label>
-              <textarea rows={5} className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none" placeholder="Tell us more..." />
+              <label htmlFor="message" className="block text-sm text-muted-foreground mb-1.5">Message</label>
+              <textarea id="message" name="message" rows={5} required value={form.message} onChange={handleChange} className="w-full bg-background border border-border rounded-lg px-4 py-2.5 text-foreground text-sm focus:ring-2 focus:ring-primary focus:border-primary outline-none transition resize-none" placeholder="Tell us more..." />
             </div>
-            <button type="submit" className="gold-gradient text-secondary font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm">
-              Send Message
+            <button type="submit" disabled={loading} className="gold-gradient text-secondary font-semibold px-8 py-3 rounded-lg hover:opacity-90 transition-opacity text-sm inline-flex items-center gap-2 disabled:opacity-60 disabled:cursor-not-allowed">
+              {loading ? (<><Loader2 className="w-4 h-4 animate-spin" /> Sending...</>) : "Send Message"}
             </button>
           </form>
         </div>
