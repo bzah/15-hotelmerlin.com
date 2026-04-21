@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { destinationRelated } from "@/data/relatedLinks";
 import lombokImg from "@/assets/lombok.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -169,12 +171,11 @@ const DestinationLombok = () => {
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4 justify-center">
-          <Link to="/best-hotels-bali" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Best Hotels in Bali</Link>
-          <Link to="/hotels-yogyakarta" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Hotels in Yogyakarta</Link>
-          <Link to="/hotel-merlin-batam" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Hotel Merlin Batam</Link>
-          <Link to="/#blog" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Travel Blog</Link>
-        </div>
+        <RelatedReads
+          title="Lombok, Gilis & Beyond — Related Guides"
+          intro="Diving stories, sister islands and Indonesia travel tips for your Lombok itinerary."
+          links={destinationRelated.lombok}
+        />
       </article>
 
       <Footer />

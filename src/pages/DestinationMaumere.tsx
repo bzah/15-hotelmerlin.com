@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { destinationRelated } from "@/data/relatedLinks";
 import maumereImg from "@/assets/maumere.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -178,17 +180,11 @@ const DestinationMaumere = () => {
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4 justify-center">
-          <Link to="/hotel-merlin-jakarta" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Hotel Merlin Jakarta
-          </Link>
-          <Link to="/hotel-merlin-batam" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Hotel Merlin Batam
-          </Link>
-          <Link to="/#blog" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Travel Blog
-          </Link>
-        </div>
+        <RelatedReads
+          title="Maumere, Flores & Indonesia Diving — More Reading"
+          intro="Routes, dive stories and stopover hotels for the long journey to Flores."
+          links={destinationRelated.maumere}
+        />
       </article>
 
       <Footer />

@@ -5,6 +5,8 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { destinationRelated } from "@/data/relatedLinks";
 import jakartaImg from "@/assets/jakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -191,18 +193,11 @@ const DestinationJakarta = () => {
           </a>
         </div>
 
-        {/* Related */}
-        <div className="mt-12 flex flex-wrap gap-4 justify-center">
-          <Link to="/hotel-merlin-batam" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Hotel Merlin Batam
-          </Link>
-          <Link to="/merlin-hotel-maumere" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Merlin Hotel Maumere
-          </Link>
-          <Link to="/#blog" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Travel Blog
-          </Link>
-        </div>
+        <RelatedReads
+          title="Continue Exploring — Jakarta & Beyond"
+          intro="Trip planning reads for travellers landing in Jakarta and extending into Java, Batam or Bali."
+          links={destinationRelated.jakarta}
+        />
       </article>
 
       <Footer />
