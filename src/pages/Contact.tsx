@@ -80,6 +80,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contact Hotel Merlin — Indonesia Travel Experts | Hotel Booking Help 2026"
+        description="Contact Hotel Merlin's travel team for hotel recommendations, partnership inquiries, or booking support across Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere."
+        path="/contact"
+        keywords="contact hotel merlin, indonesia hotel booking help, travel inquiries indonesia, hotel merlin email, hotel partnership indonesia"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-20">
