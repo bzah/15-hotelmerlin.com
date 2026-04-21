@@ -2,17 +2,21 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const PrivacyPolicy = () => {
   useEffect(() => {
-    document.title = "Privacy Policy — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Hotel Merlin privacy policy. Learn how we collect, use, and protect your personal data when you use HotelMerlin.com.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Privacy Policy — Hotel Merlin Indonesia 2026"
+        description="How HotelMerlin.com collects, uses, and protects your personal data. GDPR-compliant privacy policy for our Indonesia hotel & travel guide."
+        path="/privacy-policy"
+        keywords="hotel merlin privacy policy, gdpr indonesia travel"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">

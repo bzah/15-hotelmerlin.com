@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 import { Shield } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const DMCA = () => {
   useEffect(() => {
-    document.title = "DMCA Policy — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "DMCA takedown policy for HotelMerlin.com. Learn how to report copyright infringement and submit takedown requests.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="DMCA Takedown Policy — Hotel Merlin"
+        description="DMCA copyright takedown policy for HotelMerlin.com. How to report copyright infringement and submit takedown requests."
+        path="/dmca"
+        keywords="hotel merlin dmca, copyright takedown indonesia"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">

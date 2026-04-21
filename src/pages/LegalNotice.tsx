@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 import { Scale } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const LegalNotice = () => {
   useEffect(() => {
-    document.title = "Legal Notice (Impressum) — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Legal notice and impressum for HotelMerlin.com. Site operator information, affiliate disclosure, editorial independence, and liability disclaimer.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Legal Notice & Impressum — Hotel Merlin Indonesia"
+        description="Legal notice and impressum for HotelMerlin.com: site operator, affiliate disclosure, editorial independence, and liability disclaimer."
+        path="/legal-notice"
+        keywords="hotel merlin legal notice, hotel merlin impressum, affiliate disclosure"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">
