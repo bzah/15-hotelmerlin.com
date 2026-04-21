@@ -1,7 +1,30 @@
+# HotelMerlin.com — Robots directives
+# Allow all major search engines and social crawlers full access
+
 User-agent: Googlebot
+Allow: /
+Disallow: /api/
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Googlebot-News
 Allow: /
 
 User-agent: Bingbot
+Allow: /
+Disallow: /api/
+
+User-agent: Slurp
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Baiduspider
+Allow: /
+
+User-agent: YandexBot
 Allow: /
 
 User-agent: Twitterbot
@@ -10,7 +33,24 @@ Allow: /
 User-agent: facebookexternalhit
 Allow: /
 
-User-agent: *
+User-agent: LinkedInBot
 Allow: /
 
+User-agent: Applebot
+Allow: /
+
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /*?*utm_
+Disallow: /*?*fbclid
+Disallow: /*?*gclid
+
+# Sitemap index
 Sitemap: https://hotelmerlin.com/sitemap.xml
+Sitemap: https://hotelmerlin.com/sitemaps/pages.xml
+Sitemap: https://hotelmerlin.com/sitemaps/destinations.xml
+Sitemap: https://hotelmerlin.com/sitemaps/blog.xml
+
+# Host preference
+Host: https://hotelmerlin.com
