@@ -46,11 +46,14 @@ Disallow: /*?*utm_
 Disallow: /*?*fbclid
 Disallow: /*?*gclid
 
-# Sitemap index
+# Rank Math style sitemap index
+Sitemap: https://hotelmerlin.com/sitemap_index.xml
 Sitemap: https://hotelmerlin.com/sitemap.xml
-Sitemap: https://hotelmerlin.com/sitemaps/pages.xml
-Sitemap: https://hotelmerlin.com/sitemaps/destinations.xml
-Sitemap: https://hotelmerlin.com/sitemaps/blog.xml
+Sitemap: https://hotelmerlin.com/page-sitemap.xml
+Sitemap: https://hotelmerlin.com/destination-sitemap.xml
+Sitemap: https://hotelmerlin.com/post-sitemap.xml
+Sitemap: https://hotelmerlin.com/category-sitemap.xml
+Sitemap: https://hotelmerlin.com/legal-sitemap.xml
 
 # Host preference
 Host: https://hotelmerlin.com
