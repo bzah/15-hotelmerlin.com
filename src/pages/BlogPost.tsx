@@ -4,6 +4,8 @@ import { blogPosts } from "@/data/blogPosts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { blogRelated } from "@/data/relatedLinks";
 import { useEffect } from "react";
 
 const BlogPost = () => {
@@ -142,6 +144,15 @@ const BlogPost = () => {
             return <p key={i} className="text-muted-foreground leading-relaxed mb-3">{renderInline(trimmed)}</p>;
           })}
         </div>
+
+        {/* Related internal links — long-tail anchors for SEO */}
+        {blogRelated[post.slug] && (
+          <RelatedReads
+            title="Keep Reading — Related Hotels & Guides"
+            intro="Curated next stops for travellers researching this topic on Hotel Merlin."
+            links={blogRelated[post.slug]}
+          />
+        )}
 
         {/* CTA */}
         <div className="mt-16 p-8 rounded-lg navy-gradient text-center">

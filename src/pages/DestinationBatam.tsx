@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { MapPin, Star, Waves, Ship, ArrowRight, TreePalm } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
