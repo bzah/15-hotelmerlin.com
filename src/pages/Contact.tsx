@@ -39,17 +39,27 @@ const Contact = () => {
   useEffect(() => {
     window.scrollTo(0, 0);
 
+    const baseUrl = "https://hotelmerlin.com";
     const schemas = [
       {
         "@context": "https://schema.org",
         "@type": "ContactPage",
-        name: "Contact Hotel Merlin",
-        url: "https://hotelmerlin.com/contact",
+        name: "Contact Hotel Merlin — Indonesia Hotel & Travel Booking Help",
+        url: `${baseUrl}/contact`,
+        description:
+          "Get in touch with Hotel Merlin's Indonesia travel team for hotel recommendations, booking support, partnership inquiries and concierge help across Bali, Jakarta, Lombok, Yogyakarta, Batam and Maumere.",
+        inLanguage: "en",
+        isPartOf: { "@type": "WebSite", name: "Hotel Merlin", url: baseUrl },
         mainEntity: {
-          "@type": "LocalBusiness",
+          "@type": "TravelAgency",
+          "@id": `${baseUrl}/#organization`,
           name: "Hotel Merlin",
+          url: baseUrl,
+          logo: `${baseUrl}/favicon.png`,
+          image: `${baseUrl}/favicon.png`,
+          email: "contact@hotelmerlin.com",
           telephone: "+62-21-0000000",
-          email: "info@hotelmerlin.com",
+          priceRange: "$-$$$",
           address: {
             "@type": "PostalAddress",
             streetAddress: "Jl. Hayam Wuruk",
@@ -58,42 +68,129 @@ const Contact = () => {
             postalCode: "10120",
             addressCountry: "ID",
           },
+          geo: { "@type": "GeoCoordinates", latitude: -6.1499, longitude: 106.8204 },
+          openingHoursSpecification: [
+            {
+              "@type": "OpeningHoursSpecification",
+              dayOfWeek: ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+              opens: "09:00",
+              closes: "18:00",
+            },
+          ],
+          areaServed: [
+            { "@type": "Country", name: "Indonesia" },
+            { "@type": "AdministrativeArea", name: "Bali" },
+            { "@type": "AdministrativeArea", name: "Jakarta" },
+            { "@type": "AdministrativeArea", name: "Yogyakarta" },
+            { "@type": "AdministrativeArea", name: "Lombok" },
+            { "@type": "AdministrativeArea", name: "Batam" },
+            { "@type": "AdministrativeArea", name: "Maumere (Flores)" },
+          ],
+          contactPoint: [
+            {
+              "@type": "ContactPoint",
+              contactType: "customer service",
+              email: "contact@hotelmerlin.com",
+              telephone: "+62-21-0000000",
+              areaServed: "ID",
+              availableLanguage: ["English", "Indonesian"],
+              hoursAvailable: "Mo-Fr 09:00-18:00",
+            },
+            {
+              "@type": "ContactPoint",
+              contactType: "reservations",
+              email: "contact@hotelmerlin.com",
+              areaServed: ["ID", "SG", "MY", "AU", "US", "GB"],
+              availableLanguage: ["English", "Indonesian"],
+            },
+            {
+              "@type": "ContactPoint",
+              contactType: "partnerships",
+              email: "contact@hotelmerlin.com",
+              areaServed: "Worldwide",
+              availableLanguage: ["English"],
+            },
+          ],
+          knowsLanguage: ["en", "id"],
+          sameAs: [],
         },
+      },
+      {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        mainEntity: [
+          {
+            "@type": "Question",
+            name: "How do I book a hotel through Hotel Merlin?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Browse our destination guides for Bali, Jakarta, Lombok, Yogyakarta, Batam and Maumere, then use the contact form on this page or email contact@hotelmerlin.com — our team replies within 24 business hours with curated hotel recommendations and trusted booking links.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "How long does Hotel Merlin take to respond to inquiries?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "We respond to all hotel booking inquiries, partnership requests and concierge questions within 24 hours on business days (Monday–Friday, 09:00–18:00 WIB).",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Can Hotel Merlin help with multi-city Indonesia itineraries?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Yes. Our Indonesia travel team specialises in multi-stop trips combining Bali, Lombok, Yogyakarta, Jakarta, Batam and Flores (Maumere). Send your dates and preferences via the contact form for a personalised itinerary.",
+            },
+          },
+          {
+            "@type": "Question",
+            name: "Does Hotel Merlin work with hotel partners and travel agencies?",
+            acceptedAnswer: {
+              "@type": "Answer",
+              text: "Hotels, DMCs and travel agencies in Indonesia can partner with Hotel Merlin for editorial features and distribution. Email contact@hotelmerlin.com with subject 'Partnership' to start the conversation.",
+            },
+          },
+        ],
       },
       {
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         itemListElement: [
-          { "@type": "ListItem", position: 1, name: "Home", item: "https://hotelmerlin.com/" },
-          { "@type": "ListItem", position: 2, name: "Contact", item: "https://hotelmerlin.com/contact" },
+          { "@type": "ListItem", position: 1, name: "Home", item: `${baseUrl}/` },
+          { "@type": "ListItem", position: 2, name: "Contact Hotel Merlin", item: `${baseUrl}/contact` },
         ],
       },
     ];
 
+    const id = "jsonld-contact";
+    document.getElementById(id)?.remove();
     const script = document.createElement("script");
-    script.id = "jsonld-contact";
+    script.id = id;
     script.type = "application/ld+json";
     script.textContent = JSON.stringify(schemas);
     document.head.appendChild(script);
-    return () => { document.getElementById("jsonld-contact")?.remove(); };
+    return () => { document.getElementById(id)?.remove(); };
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
       <SEOHead
-        title="Contact Hotel Merlin — Indonesia Travel Experts | Hotel Booking Help 2026"
-        description="Contact Hotel Merlin's travel team for hotel recommendations, partnership inquiries, or booking support across Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere."
+        title="Contact Hotel Merlin Indonesia — Hotel Booking Help, Concierge & Partnerships 2026"
+        description="Talk to Hotel Merlin's Indonesia travel team. Free help booking the best hotels in Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere. Reply within 24 hours — email contact@hotelmerlin.com."
         path="/contact"
-        keywords="contact hotel merlin, indonesia hotel booking help, travel inquiries indonesia, hotel merlin email, hotel partnership indonesia"
+        keywords="contact hotel merlin indonesia, indonesia hotel booking concierge, best hotels in bali booking help, jakarta hotel inquiry, lombok travel agent contact, yogyakarta hotel partnership, batam hotel booking support, hotel merlin email, indonesia trip planner contact"
       />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-20">
           <div className="container mx-auto px-4 text-center">
             <p className="text-primary font-body text-sm uppercase tracking-widest mb-3">Get in Touch</p>
-            <h1 className="text-4xl md:text-5xl font-heading font-bold text-secondary-foreground">Contact Us</h1>
+            <h1 className="text-4xl md:text-5xl font-heading font-bold text-secondary-foreground">
+              Contact Hotel Merlin Indonesia
+            </h1>
             <p className="text-secondary-foreground/70 mt-4 max-w-2xl mx-auto text-lg">
-              Have questions about hotels in Indonesia? Our travel team is here to help.
+              Free hotel booking help and concierge support across Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere — replies within 24 hours.
             </p>
           </div>
         </div>
@@ -102,10 +199,10 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-16 max-w-4xl">
         <div className="grid md:grid-cols-2 gap-8 mb-12">
           {[
-            { icon: Mail, label: "Email", value: "info@hotelmerlin.com", href: "mailto:info@hotelmerlin.com" },
+            { icon: Mail, label: "Email", value: "contact@hotelmerlin.com", href: "mailto:contact@hotelmerlin.com" },
             { icon: Phone, label: "Phone", value: "+62-21-0000000", href: "tel:+622100000000" },
             { icon: MapPin, label: "Address", value: "Jl. Hayam Wuruk, Jakarta 10120, Indonesia", href: undefined },
-            { icon: Clock, label: "Response Time", value: "Within 24 hours on business days", href: undefined },
+            { icon: Clock, label: "Response Time", value: "Within 24 hours, Mon–Fri 09:00–18:00 WIB", href: undefined },
           ].map((item) => (
             <div key={item.label} className="bg-card border border-border rounded-lg p-6 flex items-start gap-4">
               <item.icon className="w-6 h-6 text-primary shrink-0 mt-1" />
