@@ -12,6 +12,32 @@ const BlogPost = () => {
 
   useEffect(() => {
     window.scrollTo(0, 0);
+    if (!post) return;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.metaDescription,
+      image: `https://hotelmerlin.com${post.image}`,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { "@type": "Organization", name: "Hotel Merlin Editorial Team" },
+      publisher: {
+        "@type": "Organization",
+        name: "Hotel Merlin",
+        logo: { "@type": "ImageObject", url: "https://hotelmerlin.com/favicon.png" },
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `https://hotelmerlin.com/blog/${post.slug}` },
+      articleSection: post.category,
+    };
+    const id = "jsonld-blogpost";
+    document.getElementById(id)?.remove();
+    const script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { document.getElementById(id)?.remove(); };
   }, [post]);
 
   if (!post) return <Navigate to="/" replace />;
