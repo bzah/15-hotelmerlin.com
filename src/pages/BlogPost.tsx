@@ -3,6 +3,7 @@ import { ArrowLeft, Calendar, Clock } from "lucide-react";
 import { blogPosts } from "@/data/blogPosts";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { useEffect } from "react";
 
 const BlogPost = () => {
@@ -10,18 +11,53 @@ const BlogPost = () => {
   const post = blogPosts.find((p) => p.slug === slug);
 
   useEffect(() => {
-    if (post) {
-      document.title = `${post.title} | HotelMerlin.com`;
-      const meta = document.querySelector('meta[name="description"]');
-      if (meta) meta.setAttribute("content", post.metaDescription);
-    }
     window.scrollTo(0, 0);
+    if (!post) return;
+    const schema = {
+      "@context": "https://schema.org",
+      "@type": "BlogPosting",
+      headline: post.title,
+      description: post.metaDescription,
+      image: `https://hotelmerlin.com${post.image}`,
+      datePublished: post.date,
+      dateModified: post.date,
+      author: { "@type": "Organization", name: "Hotel Merlin Editorial Team" },
+      publisher: {
+        "@type": "Organization",
+        name: "Hotel Merlin",
+        logo: { "@type": "ImageObject", url: "https://hotelmerlin.com/favicon.png" },
+      },
+      mainEntityOfPage: { "@type": "WebPage", "@id": `https://hotelmerlin.com/blog/${post.slug}` },
+      articleSection: post.category,
+    };
+    const id = "jsonld-blogpost";
+    document.getElementById(id)?.remove();
+    const script = document.createElement("script");
+    script.id = id;
+    script.type = "application/ld+json";
+    script.textContent = JSON.stringify(schema);
+    document.head.appendChild(script);
+    return () => { document.getElementById(id)?.remove(); };
   }, [post]);
 
   if (!post) return <Navigate to="/" replace />;
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title={`${post.title} | Hotel Merlin Indonesia Blog 2026`}
+        description={post.metaDescription}
+        path={`/blog/${post.slug}`}
+        image={post.image}
+        type="article"
+        article={{
+          publishedTime: post.date,
+          modifiedTime: post.date,
+          section: post.category,
+          tags: [post.category, "Indonesia Travel", "Hotels 2026"],
+        }}
+        keywords={`${post.title.toLowerCase()}, ${post.category.toLowerCase()} indonesia 2026, indonesia travel blog`}
+      />
       <Navbar />
 
       {/* Hero */}

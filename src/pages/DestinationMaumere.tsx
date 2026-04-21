@@ -4,20 +4,25 @@ import { MapPin, Star, Fish, Mountain, ArrowRight, Compass } from "lucide-react"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import maumereImg from "@/assets/maumere.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationMaumere = () => {
   useEffect(() => {
-    document.title = "Merlin Hotel Maumere — Flores Island Travel Guide 2026";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Discover Merlin Hotel Maumere on Flores Island. Complete guide to diving, Kelimutu volcano, traditional villages, and the best places to stay in eastern Indonesia.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Merlin Hotel Maumere 2026 — Flores Diving, Kelimutu Volcano & Beach Resort Guide"
+        description="Merlin Hotel Maumere — your 2026 guide to Flores Island. Best dive resorts in Maumere Bay, Kelimutu sunrise tours, Sikka villages & where to stay in eastern Indonesia."
+        path="/merlin-hotel-maumere"
+        image="/assets/maumere.jpg"
+        keywords="merlin hotel maumere, flores island hotels, best dive resort maumere, kelimutu volcano tour from maumere, where to stay maumere flores, sea world club maumere alternative, maumere bay diving, sikka village flores, hotels near frans seda airport, eastern indonesia travel guide 2026"
+      />
       <JsonLd
         type="destination"
         name="Merlin Hotel Maumere"

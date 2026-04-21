@@ -4,20 +4,25 @@ import { MapPin, Star, Waves, Flower2, ArrowRight, Compass } from "lucide-react"
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import baliImg from "@/assets/bali.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationBali = () => {
   useEffect(() => {
-    document.title = "Best Hotels in Bali 2026 — Luxury Resorts, Villas & Travel Guide";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Find the best hotels in Bali for 2026. Complete guide to luxury resorts, private villas, beach clubs, temples, rice terraces, and nightlife in Indonesia's island paradise.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Best Luxury Hotel Bali 2026 — Top Resorts in Ubud, Seminyak, Uluwatu & Canggu"
+        description="The definitive 2026 guide to the best luxury hotels in Bali. Compare 5-star resorts in Ubud, beach villas in Seminyak, clifftop suites in Uluwatu, and surf retreats in Canggu — for every budget."
+        path="/best-hotels-bali"
+        image="/assets/bali.jpg"
+        keywords="best luxury hotel bali 2026, best resorts in ubud, where to stay in seminyak, uluwatu clifftop villas, canggu surf hotels, nusa dua 5 star resorts, best honeymoon hotel bali, best beach club bali, bali villa with private pool, top boutique hotels bali"
+      />
       <JsonLd
         type="destination"
         name="Best Hotels in Bali"

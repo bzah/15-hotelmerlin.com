@@ -2,17 +2,21 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const TermsOfService = () => {
   useEffect(() => {
-    document.title = "Terms of Service — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Terms of Service for HotelMerlin.com. Read our terms and conditions governing the use of our Indonesia hotel comparison and travel guide.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Terms of Service — Hotel Merlin Indonesia Travel Guide 2026"
+        description="Terms & conditions governing the use of HotelMerlin.com — Indonesia's hotel comparison and travel guide."
+        path="/terms-of-service"
+        keywords="hotel merlin terms of service, hotelmerlin.com terms"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">

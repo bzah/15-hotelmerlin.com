@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 import { Mail, Phone, MapPin, Clock, Send, Loader2 } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "@/hooks/use-toast";
 
@@ -36,9 +37,6 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    document.title = "Contact Hotel Merlin — Get in Touch With Our Travel Team";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Contact Hotel Merlin for travel inquiries, partnership opportunities, or support. Reach our Indonesia travel experts via email, phone, or our contact form.");
     window.scrollTo(0, 0);
 
     const schemas = [
@@ -82,6 +80,12 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Contact Hotel Merlin — Indonesia Travel Experts | Hotel Booking Help 2026"
+        description="Contact Hotel Merlin's travel team for hotel recommendations, partnership inquiries, or booking support across Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere."
+        path="/contact"
+        keywords="contact hotel merlin, indonesia hotel booking help, travel inquiries indonesia, hotel merlin email, hotel partnership indonesia"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-20">

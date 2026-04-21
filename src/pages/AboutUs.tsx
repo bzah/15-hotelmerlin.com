@@ -3,12 +3,10 @@ import { Link } from "react-router-dom";
 import { Shield, Globe, Users, Award, MapPin, Mail, Phone, Scale } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const AboutUs = () => {
   useEffect(() => {
-    document.title = "About Hotel Merlin — Indonesia Hotel Guide & Legal Notice";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Learn about Hotel Merlin — Indonesia's trusted hotel comparison and travel guide. Legal notice, editorial policy, affiliate disclosure, and contact information.");
     window.scrollTo(0, 0);
 
     // LocalBusiness + Organization schema
@@ -74,6 +72,12 @@ const AboutUs = () => {
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="About Hotel Merlin — Trusted Indonesia Hotel & Travel Guide 2026"
+        description="Meet the team behind Hotel Merlin — Indonesia's trusted independent hotel comparison and travel guide for 2026. Editorial policy, affiliate disclosure & contact information."
+        path="/about"
+        keywords="about hotel merlin, indonesia hotel guide, trusted travel website indonesia, hotel merlin editorial team, affiliate disclosure"
+      />
       <Navbar />
 
       {/* Hero */}

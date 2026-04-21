@@ -4,20 +4,25 @@ import { MapPin, Star, Waves, Ship, ArrowRight, TreePalm } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import batamImg from "@/assets/batam.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationBatam = () => {
   useEffect(() => {
-    document.title = "Hotel Merlin Batam — Best Hotels, Beaches & Guide 2026";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Discover Hotel Merlin Batam — your guide to the best hotels, beaches, seafood, shopping, and ferry connections from Singapore. Plan your 2026 Batam getaway.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Hotel Merlin Batam 2026 — Best Beach Resorts, Spa & Ferry Guide from Singapore"
+        description="Hotel Merlin Batam — the 2026 weekend guide for Singapore travelers. Compare beach resorts, spa hotels, golf properties & seafood dining near Nagoya Hill, plus ferry tips."
+        path="/hotel-merlin-batam"
+        image="/assets/batam.jpg"
+        keywords="hotel merlin batam, best beach resort batam 2026, batam weekend getaway from singapore, batam spa hotel, hotels near nagoya hill batam, batam ferry from harbourfront, cheap luxury hotel batam, batam golf resort, montigo resort batam alternative, batam family resort"
+      />
       <JsonLd
         type="destination"
         name="Hotel Merlin Batam"

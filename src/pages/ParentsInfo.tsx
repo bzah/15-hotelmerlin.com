@@ -3,17 +3,21 @@ import { Link } from "react-router-dom";
 import { Users } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const ParentsInfo = () => {
   useEffect(() => {
-    document.title = "Parents Info — Hotel Merlin | Child Safety & Family Travel";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Parents' information for HotelMerlin.com. Learn about child safety online, our data practices for minors, and family travel tips across Indonesia.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Family Travel Indonesia & Child Safety — Parents Info | Hotel Merlin"
+        description="Parents' information for HotelMerlin.com: child safety online, data practices for minors, and family-friendly travel tips across Indonesia."
+        path="/parents-info"
+        keywords="family travel indonesia, family hotels bali, child safety online, kid friendly bali resorts"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">

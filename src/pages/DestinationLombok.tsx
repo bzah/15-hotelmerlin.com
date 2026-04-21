@@ -4,20 +4,25 @@ import { MapPin, Star, Mountain, Waves, ArrowRight, Compass } from "lucide-react
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import lombokImg from "@/assets/lombok.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationLombok = () => {
   useEffect(() => {
-    document.title = "Hotels in Lombok 2026 — Beaches, Rinjani & Gili Islands Guide";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Find the best hotels in Lombok for 2026. Complete guide to pristine beaches, Mount Rinjani trekking, Gili Islands, surfing, and luxury resorts. Bali's unspoiled neighbor.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Best Hotels in Lombok 2026 — Gili Islands, Kuta Beach & Mount Rinjani Resort Guide"
+        description="The 2026 guide to the best hotels in Lombok. Beach resorts in Senggigi & Kuta Lombok, Gili Trawangan villas, Mount Rinjani trekking lodges & Selong Belanak surf stays."
+        path="/hotels-lombok"
+        image="/assets/lombok.jpg"
+        keywords="best hotels in lombok 2026, gili trawangan hotels, gili air boutique resort, kuta lombok beach resort, mount rinjani trekking lodge, selong belanak surf hotel, senggigi beach resort lombok, where to stay in lombok for honeymoon, cheap luxury villa lombok, is lombok better than bali"
+      />
       <JsonLd
         type="destination"
         name="Hotels in Lombok"

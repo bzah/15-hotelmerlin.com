@@ -2,17 +2,21 @@ import { useEffect } from "react";
 import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const CookiePolicy = () => {
   useEffect(() => {
-    document.title = "Cookie Policy — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Cookie Policy for HotelMerlin.com. Learn what cookies we use, why we use them, and how to manage your cookie preferences.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Cookie Policy — Hotel Merlin"
+        description="Cookie Policy for HotelMerlin.com — what cookies we use, why, and how to manage your preferences."
+        path="/cookie-policy"
+        keywords="hotel merlin cookie policy, gdpr cookies"
+      />
       <Navbar />
       <div className="relative pt-16">
         <div className="navy-gradient py-16">

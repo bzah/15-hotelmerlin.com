@@ -2,19 +2,23 @@ import { useLocation, Link } from "react-router-dom";
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
+import SEOHead from "@/components/SEOHead";
 
 const NotFound = () => {
   const location = useLocation();
 
   useEffect(() => {
     console.error("404 Error: User attempted to access non-existent route:", location.pathname);
-    document.title = "Page Not Found — Hotel Merlin";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "The page you're looking for doesn't exist. Browse our Indonesia hotel guides and travel tips.");
   }, [location.pathname]);
 
   return (
     <>
+      <SEOHead
+        title="Page Not Found (404) — Hotel Merlin Indonesia"
+        description="The page you're looking for doesn't exist. Browse our Indonesia hotel guides for Bali, Jakarta, Lombok, Yogyakarta, Batam & Maumere."
+        path={location.pathname}
+        noindex
+      />
       <Navbar />
       <main className="flex min-h-[70vh] items-center justify-center bg-background px-4">
         <div className="mx-auto max-w-lg text-center">

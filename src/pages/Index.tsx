@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import Hero from "@/components/Hero";
 import Destinations from "@/components/Destinations";
@@ -8,16 +7,17 @@ import GYGWidget from "@/components/GYGWidget";
 import BlogSection from "@/components/BlogSection";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 
 const Index = () => {
-  useEffect(() => {
-    document.title = "Hotel Merlin — Best Hotels in Indonesia 2026 | Jakarta, Bali, Batam, Lombok";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Hotel Merlin — your complete guide to the best hotels in Indonesia for 2026. Compare luxury resorts, budget stays & tours in Jakarta, Bali, Batam, Yogyakarta, Lombok & Maumere.");
-  }, []);
-
   return (
     <div className="min-h-screen">
+      <SEOHead
+        title="Hotel Merlin — Best Hotels in Indonesia 2026 | Bali, Jakarta, Lombok & Yogyakarta Guide"
+        description="Hotel Merlin — the complete 2026 guide to the best luxury hotels, beach resorts & boutique stays in Indonesia. Expert reviews for Bali, Jakarta, Batam, Yogyakarta, Lombok & Maumere."
+        path="/"
+        keywords="best hotels in indonesia 2026, best luxury hotel bali 2026, where to stay in bali for honeymoon, hotel merlin jakarta, merlynn park hotel jakarta, best beach resorts indonesia, gili islands hotels, hotels near borobudur, top boutique hotels yogyakarta, indonesia travel guide 2026"
+      />
       <JsonLd
         type="organization"
         name="Hotel Merlin"
