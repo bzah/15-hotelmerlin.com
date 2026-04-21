@@ -4,20 +4,25 @@ import { MapPin, Star, Landmark, Drama, ArrowRight, Compass } from "lucide-react
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import yogyakartaImg from "@/assets/yogyakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationYogyakarta = () => {
   useEffect(() => {
-    document.title = "Hotels in Yogyakarta 2026 — Borobudur, Prambanan & Travel Guide";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Discover the best hotels in Yogyakarta for 2026. Visit Borobudur and Prambanan temples, explore batik workshops, Javanese cuisine, and the Sultan's Palace. Complete travel guide.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Best Hotels in Yogyakarta 2026 — Stay Near Borobudur, Prambanan & Malioboro Street"
+        description="The 2026 guide to the best hotels in Yogyakarta. Boutique stays on Malioboro, luxury resorts near Borobudur sunrise, heritage hotels by the Sultan's Palace & Prambanan."
+        path="/hotels-yogyakarta"
+        image="/assets/yogyakarta.jpg"
+        keywords="best hotels in yogyakarta 2026, hotels near borobudur temple, hotels near prambanan, best hotel malioboro street, boutique hotel prawirotaman yogyakarta, where to stay in jogja first time, yogyakarta sultan palace hotel, amanjiwo borobudur alternative, cheap luxury hotel yogyakarta, jogja heritage hotel"
+      />
       <JsonLd
         type="destination"
         name="Hotels in Yogyakarta"

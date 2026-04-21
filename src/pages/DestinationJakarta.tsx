@@ -4,20 +4,25 @@ import { MapPin, Star, Utensils, ShoppingBag, Landmark, ArrowRight } from "lucid
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
+import SEOHead from "@/components/SEOHead";
 import jakartaImg from "@/assets/jakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
 
 const DestinationJakarta = () => {
   useEffect(() => {
-    document.title = "Hotel Merlin Jakarta — Best Hotels & Travel Guide 2026";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Find the best Hotel Merlin Jakarta options for 2026. Complete guide to luxury hotels, top attractions, dining, shopping, and nightlife in Indonesia's capital city.");
     window.scrollTo(0, 0);
   }, []);
 
   return (
     <div className="min-h-screen bg-background">
+      <SEOHead
+        title="Hotel Merlin Jakarta 2026 — Best Hotels Near Merlynn Park & Sudirman Business District"
+        description="Hotel Merlin Jakarta — your 2026 guide to the best 5-star hotels, business stays & boutique properties near Merlynn Park, Sudirman, Thamrin, and Central Jakarta attractions."
+        path="/hotel-merlin-jakarta"
+        image="/assets/jakarta.jpg"
+        keywords="hotel merlin jakarta, merlynn park hotel jakarta, best business hotel jakarta sudirman, 5 star hotel central jakarta, best hotels near monas, hotels near grand indonesia mall, jakarta luxury hotel 2026, where to stay in jakarta first time, hotels near soekarno hatta airport, best hotel kuningan jakarta"
+      />
       <JsonLd
         type="destination"
         name="Hotel Merlin Jakarta"
