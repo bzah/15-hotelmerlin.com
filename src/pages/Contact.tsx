@@ -36,9 +36,6 @@ const Contact = () => {
   };
 
   useEffect(() => {
-    document.title = "Contact Hotel Merlin — Get in Touch With Our Travel Team";
-    const meta = document.querySelector('meta[name="description"]');
-    if (meta) meta.setAttribute("content", "Contact Hotel Merlin for travel inquiries, partnership opportunities, or support. Reach our Indonesia travel experts via email, phone, or our contact form.");
     window.scrollTo(0, 0);
 
     const schemas = [
