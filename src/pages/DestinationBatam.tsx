@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { MapPin, Star, Waves, Ship, ArrowRight, TreePalm } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { destinationRelated } from "@/data/relatedLinks";
 import batamImg from "@/assets/batam.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -197,17 +199,11 @@ const DestinationBatam = () => {
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4 justify-center">
-          <Link to="/hotel-merlin-jakarta" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Hotel Merlin Jakarta
-          </Link>
-          <Link to="/merlin-hotel-maumere" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Merlin Hotel Maumere
-          </Link>
-          <Link to="/#blog" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">
-            → Travel Blog
-          </Link>
-        </div>
+        <RelatedReads
+          title="More on Batam & Indonesia Weekend Trips"
+          intro="Singapore-friendly guides, ferry tips and sister destinations for travellers planning a Batam stay."
+          links={destinationRelated.batam}
+        />
       </article>
 
       <Footer />

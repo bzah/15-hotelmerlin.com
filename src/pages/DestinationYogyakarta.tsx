@@ -1,10 +1,12 @@
 import { useEffect } from "react";
-import { Link } from "react-router-dom";
+
 import { MapPin, Star, Landmark, Drama, ArrowRight, Compass } from "lucide-react";
 import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import SEOHead from "@/components/SEOHead";
+import RelatedReads from "@/components/RelatedReads";
+import { destinationRelated } from "@/data/relatedLinks";
 import yogyakartaImg from "@/assets/yogyakarta.jpg";
 
 const GYG_PARTNER = "0IQTGX8";
@@ -174,12 +176,11 @@ const DestinationYogyakarta = () => {
           </a>
         </div>
 
-        <div className="mt-12 flex flex-wrap gap-4 justify-center">
-          <Link to="/best-hotels-bali" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Best Hotels in Bali</Link>
-          <Link to="/hotels-lombok" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Hotels in Lombok</Link>
-          <Link to="/hotel-merlin-jakarta" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Hotel Merlin Jakarta</Link>
-          <Link to="/#blog" className="text-primary hover:text-gold-dark font-medium text-sm transition-colors">→ Travel Blog</Link>
-        </div>
+        <RelatedReads
+          title="Yogyakarta, Borobudur & Java — More Reading"
+          intro="Pair Yogyakarta with neighbouring destinations and travel-tips deep-dives."
+          links={destinationRelated.yogyakarta}
+        />
       </article>
 
       <Footer />
